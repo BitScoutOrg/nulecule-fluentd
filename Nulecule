@@ -40,6 +40,9 @@ graph:
       - name: link_qpid
         description: Use --link bitscout-qpid-router
         default: "--link bitscout-qpid-router"
+      - name: syslog_listen_port
+        description: Port for syslog listener to listen on
+        default: 10514
     artifacts:
       docker:
         - file://artifacts/docker/run
