@@ -1,10 +1,10 @@
 #!/bin/sh
 
 set -ex
-prefix=${PREFIX:-${1:-bitscout/}}
+prefix=${PREFIX:-${1:-viaq/}}
 version=${VERSION:-${2:-latest}}
-docker build -t "${prefix}fluentd-app:${version}" .
+docker build -t "${prefix}nulecule-fluentd:${version}" .
 
 if [ -n "${PUSH:-$3}" ]; then
-	docker push "${prefix}fluentd-app:${version}"
+	docker push "${prefix}nulecule-fluentd:${version}"
 fi
